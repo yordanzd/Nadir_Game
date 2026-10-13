@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dqod6t36p685u"]
+
+[ext_resource type="Shader" uid="uid://be26ejq5rqflw" path="res://shaders/psx.gdshader" id="1_wgked"]
+
+[resource]
+shader = ExtResource("1_wgked")
+shader_parameter/psx_resolution = 240.0
+shader_parameter/color_palette = 32.0
+shader_parameter/dither_strength = 0.3
+shader_parameter/warp_intensity = 0.002
+shader_parameter/scanline_intensity = 0.15
+shader_parameter/gamma_correction = 1.8
+shader_parameter/texture_banding = 0.3
+shader_parameter/pixel_aspect = 1.0

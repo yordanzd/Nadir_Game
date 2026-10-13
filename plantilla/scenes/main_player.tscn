@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dq21mmpw3ofdw"]
+
+[ext_resource type="Script" uid="uid://bu784kvjsy6bw" path="res://scripts/main_player.gd" id="1_xr3bu"]
+[ext_resource type="PackedScene" uid="uid://c0j1ckkl0pojh" path="res://shaders/post_process_layer.tscn" id="2_7ughw"]
+[ext_resource type="PackedScene" uid="uid://dg61oein22d1t" path="res://scenes/character_16.tscn" id="2_xr3bu"]
+[ext_resource type="FontFile" uid="uid://dag0icw8ryihh" path="res://fonts/OpenSans-Regular.ttf" id="3_vr3wt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ais3i"]
+radius = 0.28125
+height = 1.8701782
+
+[sub_resource type="TorusMesh" id="TorusMesh_vr3wt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vr3wt"]
+shading_mode = 0
+
+[node name="main_player" type="CharacterBody3D" unique_id=2039951501]
+script = ExtResource("1_xr3bu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=314743031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93655396, 0)
+shape = SubResource("CapsuleShape3D_ais3i")
+
+[node name="post_process_layer" parent="." unique_id=2127539440 instance=ExtResource("2_7ughw")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=953887123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6903942, -0.18334326)
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D" unique_id=298258825]
+transform = Transform3D(1, 0, 0, 0, 0.9989531, 0.04574657, 0, -0.04574657, 0.9989531, 0, -0.06870484, -0.37518552)
+light_energy = 15.0
+shadow_enabled = true
+spot_range = 19.171228
+spot_angle = 42.487656
+
+[node name="indicador" type="Label3D" parent="Camera3D" unique_id=773091453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07747674, -0.78413534)
+visible = false
+texture_filter = 0
+modulate = Color(1, 1, 0, 1)
+text = "E"
+font = ExtResource("3_vr3wt")
+font_size = 20
+
+[node name="puntero" type="MeshInstance3D" parent="Camera3D" unique_id=1419586256]
+transform = Transform3D(0.001, 0, 0, 0, -4.371139e-11, -0.001, 0, 0.001, -4.371139e-11, 0, 0, -0.056226313)
+mesh = SubResource("TorusMesh_vr3wt")
+surface_material_override/0 = SubResource("StandardMaterial3D_vr3wt")
+
+[node name="Character_16" parent="." unique_id=1688734292 instance=ExtResource("2_xr3bu")]
+transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0.4, 0, 0, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1353162018]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
