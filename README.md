@@ -77,36 +77,6 @@ Cada loop introduce nuevas mecánicas de terror, distorsiones sensoriales y piez
 
 ---
 
-## 📦 Instalación y ejecución
-
-### Desde fuente
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/TU_USUARIO/nadir-game.git
-cd nadir-game
-
-# Abrir en Godot Engine 4.x
-# Archivo -> Importar -> Seleccionar project.godot
-# F5 para ejecutar
-```
-
-### Desde build descargable
-
-1. Ve a la sección [Releases](https://github.com/TU_USUARIO/nadir-game/releases)
-2. Descarga el ZIP correspondiente a tu plataforma
-3. Extraír y ejecutar `nadir.exe` (Windows) o `nadir` (Linux/macOS)
-
----
-
-## 🌐 Demo web
-
-Puedes jugar la demo directamente desde tu navegador:
-
-🔗 **[Jugar NADIR (Web Demo)](https://TU_USUARIO.github.io/nadir-game/)**
-
----
-
 ## 🏆 Game Jam
 
 Este juego fue desarrollado para:
@@ -143,32 +113,6 @@ Este juego fue desarrollado para:
 - [ ] Pantalla de título y menú de pausa
 - [ ] Testeo de usuario y ajuste de dificultad
 - [ ] Build final + página de itch.io
-
----
-
-## 👥 Créditos
-
-| Rol | Nombre |
-|---|---|
-| **Director / Diseñador / Programador** | [Tu Nombre] |
-| **Narrativa / Guion** | [Tu Nombre] |
-| **Arte 3D / Modelado** | [Tu Nombre / assets] |
-| **Audio / SFX** | [Tu Nombre / fuentes] |
-| **QA / Playtesting** | [Tu Nombre] |
-
----
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo **[MIT License](LICENSE)**.  
-Los assets de terceros pueden tener sus propias licencias — ver `ASSETS.md`.
-
----
-
-## 🙏 Agradecimientos
-
-Gracias a los organizadores de la **Month of Horror 2 Game Jam** por crear este espacio de creación.  
-Gracias a todos los playtesters que se atrevieron a cruzar la Puerta A.
 
 ---
 
