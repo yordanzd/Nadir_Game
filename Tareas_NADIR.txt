@@ -1,0 +1,443 @@
+═══════════════════════════════════════════════════════════════════════════════
+                              NADIR - LISTA DE TAREAS
+                    Month of Horror 2: Withering Away Game Jam
+═══════════════════════════════════════════════════════════════════════════════
+
+NOTAS GENERALES:
+- (P) = Programador
+- (A) = Artista
+- Las tareas están organizadas por fases del juego
+- Marcar [X] al completar cada tarea
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 0: INTRODUCCIÓN (LOOP 0) - "La Negación"
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 ---
+
+[A] Modelar geometría base de la habitación 404 (cama, mesita de noche, ventana, puerta, monitor cardíaco, suelo, paredes, techo)
+[A] Crear texturas de paredes verde pastel limpio
+[A] Crear modelo de Clara en la cama (ojos cerrados, conectada a suero)
+[A] Crear modelo de ramo de lilas blancas frescas (estado 0% marchitez)
+[A] Crear modelo de jarrón de cristal transparente
+[A] Crear modelo de monitor cardíaco con pantalla funcional
+[A] Crear modelo de ficha médica (documento interactuable)
+[A] Crear modelo de portarretratos con foto de Mateo y Clara en la playa
+[A] Configurar iluminación cálida de atardecer entrando por ventana derecha
+[A] Crear material de suelo de linóleo pulido reflectante
+
+--- PASILLO ---
+
+[A] Modelar geometría del pasillo (puertas 401, 402, 403, 405, mostrador de recepción, Puerta A al fondo)
+[A] Crear texturas de paredes blancas con zócalo azul
+[A] Crear modelo de enfermera NPC (de pie tras mostrador, de espaldas)
+[A] Crear modelo de sillas de ruedas vacías
+[A] Configurar iluminación fluorescente blanca limpia y constante
+[A] Crear modelo de números de habitación (401, 402, 403, 405)
+
+--- PROGRAMACIÓN GENERAL ---
+
+[P] Configurar proyecto Godot 4.x con render Forward+
+[P] Implementar sistema de movimiento FPS (WASD + ratón)
+[P] Implementar sistema de interacción (E / Clic) con raycasting
+[P] Crear sistema de bucle espacial: cruzar Puerta A devuelve al inicio
+[P] Implementar trigger de despertar en habitación 404
+[P] Crear sistema de UI para diálogos y textos en pantalla
+[P] Implementar interacción con Clara (susurro: "Mateo... no te vayas...")
+[P] Implementar interacción con ficha médica (mostrar texto del documento)
+[P] Implementar interacción con enfermera (diálogo sin girarse)
+[P] Configurar audio: pitido rítmico y lento del monitor cardíaco
+[P] Configurar audio: iluminación fluorescente (zumbido sutil)
+[P] Implementar sistema de guardado de progreso (loop actual)
+
+--- AUDIO ---
+
+[P] Configurar AudioStreamPlayer para sonidos ambientales
+[P] Implementar sistema de audio posicional 3D
+[P] Grabar/obtener sonido de pitido de monitor cardíaco (ritmo lento)
+[P] Grabar/obtener sonido de zumbido fluorescente
+[P] Grabar/obtener susurro de Clara ("Mateo... no te vayas...")
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 1: LOOP 1 - "El Deterioro"
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 ---
+
+[A] Crear texturas de paredes con manchas de humedad y óxido en esquinas
+[A] Crear modelo de lilas con marchitez 20% (pétalos con puntas marrones, algunos caídos)
+[A] Crear modelo de puerta 402 entreabierta (10 cm) con textura de interior oscuro
+[A] Configurar iluminación: luz azul grisácea fría por ventana
+[A] Configurar parpadeo tenue de lámpara del techo cada 10 segundos
+[A] Crear partículas de polvo en el aire
+
+--- PASILLO ---
+
+[A] Crear texturas de suelo con manchas grises de suciedad y desgaste
+[A] Crear modelo de La Entidad (silueta humanoide completamente negra, sin facciones)
+[A] Crear animación de desaparición de La Entidad (dissolve en estática)
+[A] Configurar parpadeo asíncrono de luces fluorescentes
+[A] Crear modelo de nota/reporte clínico tirado en el suelo (interactuable)
+
+--- PROGRAMACIÓN ---
+
+[P] Implementar trigger de aparición de La Entidad a mitad del pasillo
+[P] Implementar mecánica: al centrar vista en La Entidad, parpadeo fuerte y desaparición
+[P] Implementar sistema de cambio de loop (transición Loop 0 → Loop 1)
+[P] Implementar interacción con reporte clínico (mostrar texto del documento)
+[P] Implementar diálogo de Mateo al ver flores marchitas
+[P] Implementar diálogo de Clara ("...hace frío, Mateo... ¿por qué apagaste la luz?")
+[P] Implementar diálogo de enfermera ("No hay doctores en este turno...")
+[P] Implementar comentario de Mateo al leer reporte ("¿M. V.? Esas son mis iniciales...")
+[P] Configurar audio: zumbido eléctrico de lámpara
+[P] Configurar audio: parpadeo de fluorescentes (chasquido)
+[P] Configurar audio: respiración pesada de Clara
+
+--- AUDIO ---
+
+[P] Grabar/obtener sonido de chasquido de fluorescente
+[P] Grabar/obtener sonido de respiración pesada
+[P] Grabar/obtener diálogo de enfermera
+[P] Grabar/obtener diálogo de Clara (voz débil, entrecortada)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 2: LOOP 2 - "La Paranoia"
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 ---
+
+[A] Crear texturas de paredes con grietas visibles y manchas de humedad oscura
+[A] Crear modelo de lilas con marchitez 45% (múltiples pétalos caídos, tallos doblados, agua turbia amarillenta)
+[A] Crear modelo de ventana con La Entidad pegada al cristal exterior
+[A] Crear textura de noche cerrada y densa (sin luna ni estrellas) para ventana
+[A] Configurar iluminación: luz de noche cerrada, parpadeo errático de techo
+[A] Crear modelo de grabadora de cassette sobre mostrador de recepción
+[A] Crear efecto de golpes suaves e irregulares en el cristal de ventana
+
+--- PASILLO ---
+
+[A] Crear texturas de alfombra desgastada y ligeramente húmeda
+[A] Crear modelo de paciente anciano en silla de ruedas (mirando fijamente a pared)
+[A] Crear textura de pared de ladrillo para puerta 403 (entreabierta con murmullo)
+[A] Configurar iluminación: alternancia entre blanco frío y amarillento tenue
+[A] Crear modelo de puerta 403 entreabierta con emisión de estática
+
+--- PROGRAMACIÓN ---
+
+[P] Implementar trigger de La Entidad en ventana (visible desde inicio del loop)
+[P] Implementar mecánica: acercarse a 1.5m de ventana → ráfaga de viento, luces apagan 0.5s, Entidad desaparece
+[P] Implementar sistema de cambio de loop (Loop 1 → Loop 2)
+[P] Implementar interacción con ventana (diálogos de Mateo antes/después de desaparición)
+[P] Implementar interacción con grabadora de cassette (reproducir audio con subtítulos)
+[P] Implementar diálogo de paciente en silla de ruedas ("El tiempo no avanza hacia adelante aquí...")
+[P] Implementar diálogo de Clara ("...no mires afuera, Mateo... siempre ha estado ahí...")
+[P] Implementar comentario de Mateo sobre flores ("Se están pudriendo por momentos...")
+[P] Configurar audio: golpes suaves en cristal
+[P] Configurar audio: murmullo de estática desde puerta 403
+[P] Configurar audio: audio distorsionado de grabadora (voz de doctor con interferencias)
+
+--- AUDIO ---
+
+[P] Grabar/obtener sonido de golpes en cristal
+[P] Grabar/obtener sonido de estática/murmullo
+[P] Grabar/obtener audio de grabadora (voz de doctor: "Sesión 14. El sujeto insiste...")
+[P] Grabar/obtener diálogo de paciente anciano
+[P] Grabar/obtener diálogo de Clara (voz con reverberación lejana)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 3: LOOP 3 - "La Fractura"
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 ---
+
+[A] Crear texturas de paredes con humedad negra corroyendo papel pintado
+[A] Crear modelo de lilas con marchitez 70% (caídas casi por completo, pétalos negros/marrones, tallos retorcidos con hongo grisáceo, líquido oscuro y viscoso en jarrón)
+[A] Crear modelo de lámpara de pie tenue con luz amarillenta enfermiza
+[A] Crear textura de monitor cardíaco con pitido errático y acelerado
+[A] Configurar iluminación: solo lámpara de pie, parpadeo amarillento
+
+--- PASILLO ---
+
+[A] Crear geometría de pasillo 30% más largo (escala en Z incrementada)
+[A] Crear texturas de bloques de ladrillo desgastado para puertas cegadas
+[A] Crear modelo de La Entidad colgada del techo (postura invertida, similar a araña humanoide)
+[A] Crear animación de cabeza de La Entidad oscilando con chasquido óseo
+[A] Crear modelo de estatuas de médicos (batas de piedra agrietada, rostros lisos sin ojos/nariz/boca)
+[A] Crear modelo de nota de consentimiento firmada (manchada de fluido oscuro, firma tachada compulsivamente)
+[A] Configurar iluminación: tubos fluorescentes rojos de emergencia parpadeantes
+[A] Crear efecto de disolución de La Entidad en nube de estática visual
+
+--- PROGRAMACIÓN ---
+
+[P] Implementar trigger de La Entidad colgada del techo (bloquea paso a mitad del pasillo)
+[P] Implementar mecánica: acercarse a 3m debajo de ella → bajón de tensión (0.3s oscuridad absoluta), sonido gutural, disolución en estática
+[P] Implementar sistema de cambio de loop (Loop 2 → Loop 3)
+[P] Implementar interacción con estatuas de médicos (diálogo de Mateo)
+[P] Implementar interacción con nota de consentimiento (mostrar texto del documento)
+[P] Implementar diálogo de Clara ("...¿a quién le estás hablando, Mateo?... No hay nadie más aquí...")
+[P] Implementar comentario de Mateo sobre nota ("¡Esto es mentira! ¡Yo nunca firmé esto!")
+[P] Implementar comentario de Mateo sobre flores ("Están casi muertas... Apestan a podrido")
+[P] Configurar audio: chasquido óseo de cabeza de La Entidad
+[P] Configurar audio: bajón de tensión (sonido gutural seco cerca de oídos)
+[P] Configurar audio: disolución en estática
+[P] Configurar audio: pitido errático y acelerado de monitor
+
+--- AUDIO ---
+
+[P] Grabar/obtener sonido de chasquido óseo
+[P] Grabar/obtener sonido gutural seco
+[P] Grabar/obtener sonido de estática visual
+[P] Grabar/obtener diálogo de Clara (voz distorsionada y lejana)
+[P] Grabar/obtener diálogo de Mateo (paranoia e irritación)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 4: LOOP 4 - "El Abismo"
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 ---
+
+[A] Crear texturas de paredes con papel pintado desprendido, hormigón crudo goteando líquido espeso negruzco
+[A] Crear modelo de lilas con marchitez 95% (sin pétalos, tallos secos carbonizados con espinas oscuras, jarrón agrietado con humo grisáceo)
+[A] Crear modelo de cama con sábana manchada de fluido oscuro cubriendo rostro de Clara
+[A] Crear modelo de mano de Clara sobresaliendo de la sábana (inerte)
+[A] Crear textura de monitor cardíaco con línea plana continua
+[A] Crear modelo de frasco de sedante vacío (Haloperidol 10mg)
+[A] Crear modelo de charcos oscuros en suelo
+[A] Configurar iluminación: luces fluorescentes colgando de cables expuestos, chispas intermitentes, destellos rojos y blancos desincronizados
+
+--- PASILLO ---
+
+[A] Crear textura de suelo blando y orgánico (reacciona con pisadas húmedas)
+[A] Crear geometría de pasillo curvado hacia la izquierda (claustrofóbico)
+[A] Crear modelo de La Entidad acechando (silueta que imita movimientos con medio segundo de retraso)
+[A] Crear modelo de sombra del pasillo (silueta borrosa y temblorosa sentada en suelo, abrazando rodillas)
+[A] Crear modelo de mostrador de recepción destruido
+[A] Crear modelo de Puerta A cubierta de flores marchitas
+[A] Crear animación de La Entidad estirándose verticalmente hacia techo al ser mirada
+[A] Crear efecto de sombra alargada de La Entidad proyectada en suelo
+
+--- PROGRAMACIÓN ---
+
+[P] Implementar script de seguimiento de La Entidad (1.2m detrás del jugador al salir de habitación)
+[P] Implementar mecánica: girar 180° → La Entidad imita rotación con medio segundo de retraso
+[P] Implementar mecánica: mantener cámara fija en La Entidad >1.0s → se estira verticalmente y se disuelve en aire negro con alarido
+[P] Implementar sistema de cambio de loop (Loop 3 → Loop 4)
+[P] Implementar interacción con cama de Clara (quitar sábana, mano cae inerte)
+[P] Implementar interacción con sombra del pasillo (diálogo revelador)
+[P] Implementar interacción con frasco de sedante (mostrar texto del documento)
+[P] Implementar diálogo de Clara (inmóvil, sin respuesta)
+[P] Implementar comentario de Mateo sobre flores ("Están muertas. Todas muertas...")
+[P] Implementar comentario de Mateo sobre frasco ("Esto no es mío... ¡Ellos me están drogando!")
+[P] Configurar audio: pisadas húmedas en suelo orgánico
+[P] Configurar audio: chispas de fluorescentes
+[P] Configalar audio: alarido distorsionado de La Entidad
+[P] Configurar audio: línea plana continua de monitor cardíaco
+[P] Configurar audio: paso extra detrás del jugador al detenerse (Loop 4)
+
+--- AUDIO ---
+
+[P] Grabar/obtener sonido de pisadas húmedas
+[P] Grabar/obtener sonido de chispas eléctricas
+[P] Grabar/obtener alarido distorsionado
+[P] Grabar/obtener sonido de línea plana de monitor
+[P] Grabar/obtener diálogo de sombra ("No hay salida hacia afuera, Mateo... Solo hacia adentro...")
+[P] Grabar/obtener diálogo de Mateo (quebranto psicótico y furia)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 5: LOOP 5 - "El Abismo" (CLÍMAX)
+═══════════════════════════════════════════════════════════════════════════════
+
+--- HABITACIÓN 404 (VERSIÓN DISTORSIONADA) ---
+
+[A] Crear geometría de habitación en penumbra abismal (paredes estiradas, negras, infinitas)
+[A] Crear modelo de jarrón pulverizado (ceniza negra, carbón, clavos oxidados sobre madera quemada)
+[A] Crear modelo de La Entidad acostada en cama (masa alargada, puramente negra, amorfa, convulsionando)
+[A] Crear textura de pulso estroboscópico rojo y lento desde rincón del techo
+[A] Crear modelo de almohada sobre cabecera (interactuable para clímax)
+[A] Configurar iluminación: solo pulso rojo estroboscópico
+[A] Crear efecto de respiración ahogada, gutural y ronca
+[A] Crear animación de convulsiones de La Entidad en cama
+
+--- PROGRAMACIÓN ---
+
+[P] Implementar transición a Loop 5 (sin pasillo, confinado inmediatamente en habitación distorsionada)
+[P] Implementar trigger de puerta de entrada desaparecida
+[P] Implementar interacción con mesita de noche (cenizas) - diálogo de Mateo
+[P] Implementar interacción con La Entidad en cama (diálogo de Mateo: "Te la llevaste... Devuélvemela")
+[P] Implementar prompt de interacción final ([E] / Clic - "Acabar con esto")
+[P] Implementar sistema de QTE (Quick Time Event) para secuencia de sofocamiento
+[P] Implementar secuencia de clímax: Mateo toma almohada, presiona contra rostro de La Entidad
+[P] Implementar animación de forcejeo de La Entidad con gemido humano desgarrador
+[P] Implementar transición post-clímax: parpadeo rojo cesa, luces de emergencia se estabilizan en blanco gélido
+[P] Implementar revelación final: bajo almohada está Clara muerta (rostro pálido, ojos abiertos)
+[P] Implementar pantalla de fin de juego
+[P] Configurar audio: respiración ahogada, gutural y ronca
+[P] Configurar audio: gemido humano desgarrador de Clara
+[P] Configurar audio: luces de emergencia estabilizándose
+[P] Configurar audio: silencio absoluto post-clímax
+
+--- AUDIO ---
+
+[P] Grabar/obtener sonido de respiración ahogada/gutural
+[P] Grabar/obtener gemido humano desgarrador ("Mat... eo... p-por favor... soy yo...")
+[P] Grabar/obtener diálogo de Mateo (furia psicótica: "¡Suéltala! Sé lo que eres...")
+[P] Grabar/obtener sonido de forcejeo y sofocamiento
+[P] Grabar/obtener silencio post-clímax (tensión absoluta)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 6: SISTEMA DE FLORES DINÁMICAS (TRANSVERSAL A TODOS LOS LOOPS)
+═══════════════════════════════════════════════════════════════════════════════
+
+[A] Crear 6 estados de lilas (0%, 20%, 45%, 70%, 95%, 100%)
+[A] Crear modelos de pétalos caídos para cada estado
+[A] Crear texturas de marchitez progresiva (color, textura, rigidez)
+[A] Crear modelo de tallos con espinas oscuras (Loop 4)
+[A] Crear modelo de jarrón agrietado con humo (Loop 4)
+[A] Crear modelo de ceniza, carbón y clavos oxidados (Loop 5)
+[A] Crear partículas de humo cayendo hacia suelo (Loop 4)
+[A] Crear partículas de polvo/hongo en flores (Loop 3)
+
+[P] Implementar sistema de cambio de estado de flores según loop actual
+[P] Implementar transición visual suave entre estados de flores
+[P] Implementar interacción con flores (diálogos de Mateo según estado)
+[P] Implementar partículas de humo del jarrón (Loop 4)
+[P] Implementar partículas de polvo/hongo (Loop 3)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 7: SISTEMA DE ESPEJOS (TRANSVERSAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[A] Crear modelo de espejo en baño de habitación 404
+[A] Crear material de espejo reflectante
+[A] Crear textura de reflejo normal (Loop 0)
+[A] Crear textura de reflejo de Mateo de espaldas (Loop 2)
+[A] Crear textura de reflejo de La Entidad en posición del jugador (Loop 4)
+
+[P] Implementar sistema de espejo con reflejo dinámico
+[P] Implementar trigger de Loop 2: reflejo muestra a Mateo de espaldas
+[P] Implementar trigger de Loop 4: reflejo muestra a La Entidad en posición del jugador
+[P] Implementar transición suave entre estados de reflejo
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 8: SISTEMA DE FOTOGRAFÍAS DINÁMICAS (TRANSVERSAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[A] Crear textura de foto original: Mateo y Clara sonriendo en la playa
+[A] Crear texturas de foto con garabatos de tinta negra progresivos (Loops 1-4)
+[A] Crear textura de foto final: Mateo solo en la playa (Loop 5)
+[A] Crear modelo de portarretratos
+
+[P] Implementar sistema de cambio de textura de foto según loop actual
+[P] Implementar transición visual de garabatos progresivos
+[P] Implementar interacción con portarretratos (opcional)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 9: SISTEMA DE SUBTÍTULOS CORRUPTOS (TRANSVERSAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[P] Implementar sistema de UI para diálogos con subtítulos
+[P] Implementar efecto de corrupción de texto en Loops 3-4 (ej: "Salvar" → "Ahogar")
+[P] Implementar timing de corrupción (breve, antes de volver a normalidad)
+[P] Configurar fuente legible con efecto de distorsión
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 10: SISTEMA DE MONITOR CARDÍACO (TRANSVERSAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[A] Crear modelo de monitor cardíaco con pantalla
+[A] Crear textura de pantalla con ritmo visual (pitido)
+[A] Crear textura de línea plana (Loop 4+)
+
+[P] Implementar sistema de ritmo de pitido según loop (lento → acelerado → errático → línea plana)
+[P] Implementar trigger de Loop 4: pitido suena dentro de la cabeza del jugador (audio estéreo)
+[P] Implementar sincronización de pitido con proximidad de La Entidad
+[P] Implementar línea plana continua (Loop 4+)
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 11: SISTEMA DE AUDIO AMBIENTAL (TRANSVERSAL)
+═══════════════════════════════════════════════════════════════════════════════
+
+[P] Configurar sistema de audio posicional 3D para todos los loops
+[P] Implementar zumbidos de baja frecuencia
+[P] Implementar estática de fluorescentes
+[P] Implementar latidos cardíacos distorsionados
+[P] Implementar respiración agónica que cambia de ritmo según loop
+[P] Implementar música solo en pantalla de título (sin música melódica en gameplay)
+[P] Implementar sistema de audio binaural para efectos de terror
+
+--- AUDIO (ARTISTA SONORO) ---
+
+[A] Componer/seleccionar música para pantalla de título
+[A] Grabar/obtener todos los efectos de sonido ambientales
+[A] Grabar/obtener todos los diálogos de personajes
+[A] Grabar/obtener todos los sonidos de La Entidad
+[A] Grabar/obtener todos los sonidos de UI e interacciones
+[A] Mezclar y masterizar todos los audios
+[A] Implementar capas de audio dinámicas según loop
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 12: UI Y MENÚS
+═══════════════════════════════════════════════════════════════════════════════
+
+[A] Diseñar logo de NADIR
+[A] Diseñar pantalla de título con logo y menú
+[A] Diseñar menú de pausa
+[A] Diseñar pantalla de fin de juego
+[A] Diseñar HUD mínimo (solo prompts de interacción)
+[A] Diseñar fuente/tipografía del juego
+[A] Crear texturas de fondo para menús
+
+[P] Implementar pantalla de título con menú (Jugar, Créditos, Salir)
+[P] Implementar menú de pausa (Continuar, Reiniciar loop, Salir)
+[P] Implementar pantalla de fin de juego con créditos
+[P] Implementar sistema de prompts de interacción en pantalla
+[P] Implementar sistema de diálogos con retratos de personajes
+[P] Implementar transiciones entre menús y gameplay
+[P] Implementar sistema de guardado/carga de partida
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 13: OPTIMIZACIÓN Y TESTING
+═══════════════════════════════════════════════════════════════════════════════
+
+[P] Optimizar rendimiento (draw calls, LODs, culling)
+[P] Optimizar memoria (texturas comprimidas, audio comprimido)
+[P] Probar todos los loops y transiciones
+[P] Probar todos los triggers y mecánicas
+[P] Probar todos los diálogos y textos
+[P] Probar todos los efectos de audio
+[P] Probar en diferentes resoluciones y aspect ratios
+[P] Probar en diferentes plataformas (Windows, Linux, macOS, Web)
+[P] Corregir bugs y errores
+[P] Ajustar dificultad y pacing
+[P] Ajustar volúmenes de audio
+[P] Testeo con usuarios externos
+[P] Recopilar feedback y ajustar
+
+═══════════════════════════════════════════════════════════════════════════════
+FASE 14: BUILD Y PUBLICACIÓN
+═══════════════════════════════════════════════════════════════════════════════
+
+[P] Crear build para Windows
+[P] Crear build para Linux
+[P] Crear build para macOS
+[P] Crear build para Web (HTML5/GitHub Pages)
+[P] Crear página de itch.io con screenshots y descripción
+[P] Crear página de GitHub con README y screenshots
+[P] Preparar trailer/video promocional
+[P] Escribir descripción de la game jam
+[P] Subir a la game jam
+[P] Compartir en redes sociales
+
+═══════════════════════════════════════════════════════════════════════════════
+FIN DE LA LISTA DE TAREAS
+═══════════════════════════════════════════════════════════════════════════════
+
+NOTAS ADICIONALES:
+- Priorizar mecánicas core primero (movimiento, interacción, bucle espacial)
+- Las flores son el elemento visual más importante - dedicar tiempo extra
+- El audio es 50% de la experiencia de terror - no subestimar
+- Probar cada loop individualmente antes de integrar
+- Mantener comunicación constante entre programadores y artistas
+- Hacer playtesting frecuente desde el Loop 0
+
+═══════════════════════════════════════════════════════════════════════════════
